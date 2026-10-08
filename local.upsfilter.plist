@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>local.upsfilter</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/usr/local/bin/upsfilter</string>
+        <string>--delay</string>
+        <string>20</string>
+        <!-- For a different UPS, add e.g.:
+        <string>--vid</string><string>0x075d</string>
+        <string>--pid</string><string>0x0300</string>
+        -->
+    </array>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>KeepAlive</key>
+    <true/>
+    <key>ThrottleInterval</key>
+    <integer>10</integer>
+    <key>StandardOutPath</key>
+    <string>/var/log/upsfilter.log</string>
+    <key>StandardErrorPath</key>
+    <string>/var/log/upsfilter.log</string>
+</dict>
+</plist>
